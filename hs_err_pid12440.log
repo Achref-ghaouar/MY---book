@@ -1,0 +1,256 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_IN_PAGE_ERROR (0xc0000006) at pc=0x00007ff94ea31989, pid=12440, tid=15148
+#
+# JRE version:  (17.0.9+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.9+9, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, parallel gc, windows-amd64)
+# Problematic frame:
+# C  [VCRUNTIME140.dll+0x1989]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: --add-modules=ALL-SYSTEM --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\lombok\lombok-1.18.30.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=c:\Users\achre\AppData\Roaming\Code\User\workspaceStorage\83a72ad28cc15e24e22730a5e9183b3a\redhat.java -Daether.dependencyCollector.impl=bf c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\server\plugins\org.eclipse.equinox.launcher_1.6.600.v20231012-1237.jar -configuration c:\Users\achre\AppData\Roaming\Code\User\globalStorage\redhat.java\1.25.0\config_win -data c:\Users\achre\AppData\Roaming\Code\User\workspaceStorage\83a72ad28cc15e24e22730a5e9183b3a\redhat.java\jdt_ws --stdio
+
+Host: Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz, 4 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.2788)
+Time: Wed Dec  6 21:16:38 2023 Afr. centrale Ouest elapsed time: 0.024627 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+Stack: [0x0000007f0b500000,0x0000007f0b600000],  sp=0x0000007f0b5ff420,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [VCRUNTIME140.dll+0x1989]
+V  [jvm.dll+0x69eaa3]
+V  [jvm.dll+0x69d767]
+V  [jvm.dll+0x69d31e]
+V  [jvm.dll+0x36d087]
+V  [jvm.dll+0x7e4833]
+V  [jvm.dll+0x3f07af]
+V  [jvm.dll+0x3f23e1]
+C  [jli.dll+0x528f]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17604]
+C  [ntdll.dll+0x526a1]
+
+
+siginfo: EXCEPTION_IN_PAGE_ERROR (0xc0000006), writing address 0x0000025e57670000
+
+
+Registers:
+RAX=0x0000000000000000, RBX=0x0000025e57670000, RCX=0x0000000000010000, RDX=0x0000000000000000
+RSP=0x0000007f0b5ff420, RBP=0x0000025e596d63c0, RSI=0x0000025e5751e920, RDI=0x0000025e57670000
+R8 =0x0000000000010000, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x0000025e57670000
+R12=0x0000000000000002, R13=0x00007ff921087940, R14=0x0000025e574f7ee0, R15=0x0000000000010000
+RIP=0x00007ff94ea31989, EFLAGS=0x0000000000010202
+
+
+Top of Stack: (sp=0x0000007f0b5ff420)
+0x0000007f0b5ff420:   0000000000000000 00007ff920d5eaa3
+0x0000007f0b5ff430:   0000025e596d63c0 0000025e5751e920
+0x0000007f0b5ff440:   0000025e5751e920 0000000000000168
+0x0000007f0b5ff450:   0000000000010000 0000007f0b5ff470
+0x0000007f0b5ff460:   0000007f0b5ff6e0 0000000000000104
+0x0000007f0b5ff470:   0000010100000103 0000025e596d63c4
+0x0000007f0b5ff480:   0000000000000002 00007ff96509b3c7
+0x0000007f0b5ff490:   0000025e575e0000 0000007f00000000
+0x0000007f0b5ff4a0:   0000000000000014 00007ff900000000
+0x0000007f0b5ff4b0:   0000025e575e0000 00007ff900000000
+0x0000007f0b5ff4c0:   00000002005c3a43 00007ff900000000
+0x0000007f0b5ff4d0:   000000000000fd92 00007ff9651da540
+0x0000007f0b5ff4e0:   0000000200000000 0000000000000000
+0x0000007f0b5ff4f0:   0000000000000000 00000000b6ba97c6
+0x0000007f0b5ff500:   000000000000000b 0000000000000000
+0x0000007f0b5ff510:   0000000000230003 00000000000000b7
+0x0000007f0b5ff520:   0000025e57504350 00007ff96507a46c
+0x0000007f0b5ff530:   0000000000010005 00000000000000fd
+0x0000007f0b5ff540:   0000025e00000000 0000025e575e1080
+0x0000007f0b5ff550:   0000000000130006 0000025e575e0000
+0x0000007f0b5ff560:   00007ff920cfa490 0000007f0b5ffc88
+0x0000007f0b5ff570:   00007ff921087940 0000000000000002
+0x0000007f0b5ff580:   0000000000000001 0000007f0b5ff630
+0x0000007f0b5ff590:   0000000000000008 00007ff96509b86b
+0x0000007f0b5ff5a0:   00000000000d002c 00000000000000c0
+0x0000007f0b5ff5b0:   0000025e57504610 00007ff962bb0000
+0x0000007f0b5ff5c0:   0000000000000001 00007ff920d2f8c1
+0x0000007f0b5ff5d0:   0000000000000000 0000025e575e0fc0
+0x0000007f0b5ff5e0:   0000000000000001 0000025e575e0000
+0x0000007f0b5ff5f0:   0000025e575e02ac 0000007f0b5ff6b9
+0x0000007f0b5ff600:   0000000000000030 0000025e575e0cc0
+0x0000007f0b5ff610:   0000000000000013 0000000000000000 
+
+Instructions: (pc=0x00007ff94ea31989)
+0x00007ff94ea31889:   49 03 c8 0f 10 44 11 f0 48 83 e9 10 49 83 e8 10
+0x00007ff94ea31899:   f6 c1 0f 74 17 48 8b c1 48 83 e1 f0 0f 10 c8 0f
+0x00007ff94ea318a9:   10 04 11 0f 11 08 4c 8b c1 4d 2b c3 4d 8b c8 49
+0x00007ff94ea318b9:   c1 e9 07 74 6f 0f 29 01 eb 14 66 66 66 66 66 0f
+0x00007ff94ea318c9:   1f 84 00 00 00 00 00 0f 29 41 10 0f 29 09 0f 10
+0x00007ff94ea318d9:   44 11 f0 0f 10 4c 11 e0 48 81 e9 80 00 00 00 0f
+0x00007ff94ea318e9:   29 41 70 0f 29 49 60 0f 10 44 11 50 0f 10 4c 11
+0x00007ff94ea318f9:   40 49 ff c9 0f 29 41 50 0f 29 49 40 0f 10 44 11
+0x00007ff94ea31909:   30 0f 10 4c 11 20 0f 29 41 30 0f 29 49 20 0f 10
+0x00007ff94ea31919:   44 11 10 0f 10 0c 11 75 ae 0f 29 41 10 49 83 e0
+0x00007ff94ea31929:   7f 0f 28 c1 4d 8b c8 49 c1 e9 04 74 1a 66 66 0f
+0x00007ff94ea31939:   1f 84 00 00 00 00 00 0f 11 01 48 83 e9 10 0f 10
+0x00007ff94ea31949:   04 11 49 ff c9 75 f0 49 83 e0 0f 74 08 41 0f 10
+0x00007ff94ea31959:   0a 41 0f 11 0b 0f 11 01 49 8b c3 c3 cc cc cc cc
+0x00007ff94ea31969:   cc cc cc cc cc cc cc cc cc cc cc cc cc 66 66 0f
+0x00007ff94ea31979:   1f 84 00 00 00 00 00 57 8b c2 48 8b f9 49 8b c8
+0x00007ff94ea31989:   f3 aa 49 8b c3 5f c3 cc cc cc cc cc cc 66 66 0f
+0x00007ff94ea31999:   1f 84 00 00 00 00 00 4c 8b d9 0f b6 d2 49 b9 01
+0x00007ff94ea319a9:   01 01 01 01 01 01 01 4c 0f af ca 49 83 f8 10 0f
+0x00007ff94ea319b9:   86 f2 00 00 00 66 49 0f 6e c1 66 0f 60 c0 49 81
+0x00007ff94ea319c9:   f8 80 00 00 00 77 10 e9 6b 00 00 00 66 66 66 0f
+0x00007ff94ea319d9:   1f 84 00 00 00 00 00 f6 05 d5 49 01 00 02 75 97
+0x00007ff94ea319e9:   0f 11 01 4c 03 c1 48 83 c1 10 48 83 e1 f0 4c 2b
+0x00007ff94ea319f9:   c1 4d 8b c8 49 c1 e9 07 74 3d 4c 3b 0d 1e 46 01
+0x00007ff94ea31a09:   00 0f 87 60 00 00 00 0f 29 01 0f 29 41 10 48 81
+0x00007ff94ea31a19:   c1 80 00 00 00 0f 29 41 a0 0f 29 41 b0 49 ff c9
+0x00007ff94ea31a29:   0f 29 41 c0 0f 29 41 d0 0f 29 41 e0 66 0f 29 41
+0x00007ff94ea31a39:   f0 75 d4 49 83 e0 7f 4d 8b c8 49 c1 e9 04 74 13
+0x00007ff94ea31a49:   0f 1f 80 00 00 00 00 0f 11 01 48 83 c1 10 49 ff
+0x00007ff94ea31a59:   c9 75 f4 49 83 e0 0f 74 06 42 0f 11 44 01 f0 49
+0x00007ff94ea31a69:   8b c3 c3 0f 1f 40 00 0f 2b 01 0f 2b 41 10 48 81
+0x00007ff94ea31a79:   c1 80 00 00 00 0f 2b 41 a0 0f 2b 41 b0 49 ff c9 
+
+
+
+---------------  P R O C E S S  ---------------
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Not initialized>
+
+Dll operation events (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff712b40000 - 0x00007ff712b4e000 	c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\jre\17.0.9-win32-x86_64\bin\java.exe
+0x00007ff965070000 - 0x00007ff965268000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff9648c0000 - 0x00007ff96497f000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff9628d0000 - 0x00007ff962baa000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff95fda0000 - 0x00007ff95fe30000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x00007ff962bb0000 - 0x00007ff962cb0000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff9525e0000 - 0x00007ff9525f7000 	c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\jre\17.0.9-win32-x86_64\bin\jli.dll
+0x00007ff964e80000 - 0x00007ff96501d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff962f70000 - 0x00007ff962f92000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff963c40000 - 0x00007ff963c6b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff962d00000 - 0x00007ff962e10000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff963030000 - 0x00007ff9630cd000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff94ea30000 - 0x00007ff94ea4b000 	c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\jre\17.0.9-win32-x86_64\bin\VCRUNTIME140.dll
+0x00007ff95c7e0000 - 0x00007ff95ca7a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff964de0000 - 0x00007ff964e7e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff9646d0000 - 0x00007ff964700000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff95a030000 - 0x00007ff95a03c000 	c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\jre\17.0.9-win32-x86_64\bin\vcruntime140_1.dll
+0x00007ff93d2c0000 - 0x00007ff93d34d000 	c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\jre\17.0.9-win32-x86_64\bin\msvcp140.dll
+0x00007ff9206c0000 - 0x00007ff921321000 	c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\jre\17.0.9-win32-x86_64\bin\server\jvm.dll
+0x00007ff963180000 - 0x00007ff96322e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff964d40000 - 0x00007ff964ddc000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff963cf0000 - 0x00007ff963e16000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff962670000 - 0x00007ff9626bb000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007ff959b90000 - 0x00007ff959b99000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff964840000 - 0x00007ff9648ab000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff95d100000 - 0x00007ff95d127000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff9546d0000 - 0x00007ff9546da000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff962650000 - 0x00007ff962662000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ff960640000 - 0x00007ff960652000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff959810000 - 0x00007ff95981a000 	c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\jre\17.0.9-win32-x86_64\bin\jimage.dll
+0x00007ff960110000 - 0x00007ff9602f4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff95b020000 - 0x00007ff95b054000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff962fa0000 - 0x00007ff963022000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff951410000 - 0x00007ff95141e000 	c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\jre\17.0.9-win32-x86_64\bin\instrument.dll
+0x00007ff942ae0000 - 0x00007ff942b05000 	c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\jre\17.0.9-win32-x86_64\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\jre\17.0.9-win32-x86_64\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\jre\17.0.9-win32-x86_64\bin\server
+
+VM Arguments:
+jvm_args: --add-modules=ALL-SYSTEM --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\lombok\lombok-1.18.30.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=c:\Users\achre\AppData\Roaming\Code\User\workspaceStorage\83a72ad28cc15e24e22730a5e9183b3a\redhat.java -Daether.dependencyCollector.impl=bf 
+java_command: c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\server\plugins\org.eclipse.equinox.launcher_1.6.600.v20231012-1237.jar -configuration c:\Users\achre\AppData\Roaming\Code\User\globalStorage\redhat.java\1.25.0\config_win -data c:\Users\achre\AppData\Roaming\Code\User\workspaceStorage\83a72ad28cc15e24e22730a5e9183b3a\redhat.java\jdt_ws --stdio
+java_class_path (initial): c:\Users\achre\.vscode\extensions\redhat.java-1.25.0-win32-x64\server\plugins\org.eclipse.equinox.launcher_1.6.600.v20231012-1237.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+    uintx AdaptiveSizePolicyWeight                 = 90                                        {product} {command line}
+    uintx GCTimeRatio                              = 4                                         {product} {command line}
+     bool HeapDumpOnOutOfMemoryError               = true                                   {manageable} {command line}
+    ccstr HeapDumpPath                             = c:\Users\achre\AppData\Roaming\Code\User\workspaceStorage\83a72ad28cc15e24e22730a5e9183b3a\redhat.java         {manageable} {command line}
+   size_t InitialHeapSize                          = 104857600                                 {product} {command line}
+   size_t MaxHeapSize                              = 1073741824                                {product} {command line}
+   size_t MinHeapSize                              = 104857600                                 {product} {command line}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+     bool UseParallelGC                            = true                                      {product} {command line}
+
+Logging:
+Log output configuration:
+ #0: stdout all=off uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_171
+PATH=C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_171\bin;D:\Nodejs\;C:\Users\achre\AppData\Local\Microsoft\WindowsApps;C:\Users\achre\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\MongoDB\Server\3.2\bin;C:\Users\achre\AppData\Roaming\npm
+USERNAME=achre
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 61 Stepping 4, GenuineIntel
+TMP=C:\Users\achre\AppData\Local\Temp
+TEMP=C:\Users\achre\AppData\Local\Temp
+
+
+
+Periodic native trim disabled
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.2788)
+OS uptime: 5 days 0:21 hours
+
+CPU: total 4 (initial active 4) 
+Processor Information for all 4 processors :
+  Max Mhz: 2701, Current Mhz: 2700, Mhz Limit: 2673
+
+Memory: 4k page, system-wide physical 8108M (2890M free)
+TotalPageFile size 9113M (AvailPageFile size 2825M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 3M, peak: 3M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.9+9) for windows-amd64 JRE (17.0.9+9), built on Oct 26 2023 14:01:42 by "admin" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.
